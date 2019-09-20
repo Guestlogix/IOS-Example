@@ -1,0 +1,29 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "c82700c669dc1a3ff06b4da6ae4eaafbe28f796d",
+  "iOS" : [
+    {
+      "name" : "TravelerStripePaymentProvider",
+      "hash" : "03d96ba6735628a440a6c44380b65e5194e959c75d19bc4dc0887ce61a1e2f8d",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    },
+    {
+      "name" : "TravelerKit",
+      "hash" : "b8e310254fef3d95c7630bc55bc64b66e8d4eeefcee3b208fe15032bfb9d1ee8",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    },
+    {
+      "name" : "TravelerKitUI",
+      "hash" : "c764770b1a29c3dc6f780b2da6455d0ba7fa9e32dcf0a797f1ba1b2d311f90fe",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

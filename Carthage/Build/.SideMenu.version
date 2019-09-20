@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "794767455ac9acbb15318ca8cf04fbc8ad65fef7",
+  "iOS" : [
+    {
+      "name" : "SideMenu",
+      "hash" : "d3ac86dd9661b404c0534055d4f97bf60049b4ab26b21b64b1e1f1dff8a11849",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

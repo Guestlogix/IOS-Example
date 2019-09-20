@@ -1,0 +1,11 @@
+framework module TravelerKitUI {
+  umbrella header "TravelerKitUI.h"
+
+  export *
+  module * { export * }
+}
+
+module TravelerKitUI.Swift {
+    header "TravelerKitUI-Swift.h"
+    requires objc
+}

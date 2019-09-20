@@ -1,0 +1,4 @@
+framework module TravelerKit {
+  header "TravelerKit-Swift.h"
+  requires objc
+}

@@ -1,0 +1,11 @@
+framework module TravelerStripePaymentProvider {
+  umbrella header "TravelerStripePaymentProvider.h"
+
+  export *
+  module * { export * }
+}
+
+module TravelerStripePaymentProvider.Swift {
+    header "TravelerStripePaymentProvider-Swift.h"
+    requires objc
+}

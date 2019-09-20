@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1020"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "#Open environment swift file and search for environment variables&#10;cat ${SRCROOT}/Traveler/Environment/Environment.swift | while read line&#10;do&#10;if [[ $line =~ \&quot;.*\&quot; ]]; then&#10;variable=$(echo $line | sed &apos;s/.*&quot;\([^&quot;]*\)&quot;.*/\1/&apos;)&#10;variableName=$(echo $line | sed &apos;s:.*//\(.*\):\1:&apos;)&#10;if [[ $variableName =~ \$.* ]]; then&#10;sed -i &apos;&apos; -e &quot;s/$variable/$variableName/&quot; ${SRCROOT}/Traveler/Environment/Environment.swift&#10;fi&#10;fi&#10;done &#10;cat ${SRCROOT}/Traveler/Environment/Environment.swift&#10;"
+               shellToInvoke = "/usr/local/bin/bash">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "CAC5085922D3C736004A114B"
+                     BuildableName = "gCrew.app"
+                     BlueprintName = "gCrew"
+                     ReferencedContainer = "container:Traveler.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CAC5085922D3C736004A114B"
+               BuildableName = "gCrew.app"
+               BlueprintName = "gCrew"
+               ReferencedContainer = "container:Traveler.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CAC5085922D3C736004A114B"
+            BuildableName = "gCrew.app"
+            BlueprintName = "gCrew"
+            ReferencedContainer = "container:Traveler.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CAC5085922D3C736004A114B"
+            BuildableName = "gCrew.app"
+            BlueprintName = "gCrew"
+            ReferencedContainer = "container:Traveler.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CAC5085922D3C736004A114B"
+            BuildableName = "gCrew.app"
+            BlueprintName = "gCrew"
+            ReferencedContainer = "container:Traveler.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
