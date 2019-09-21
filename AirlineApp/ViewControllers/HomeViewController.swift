@@ -8,8 +8,12 @@
 
 import UIKit
 import SideMenu
+import TravelerKit
 
 class HomeViewController: UIViewController {
+
+    private var query = CatalogQuery(flights: nil)
+    private var resultCatalog: Catalog?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,10 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch (segue.identifier, segue.destination) {
+        case (_ , let retryVC as RetryViewController):
+            retryVC.delegate = self
+        case (_ , let resultVC as ResultViewController):
+            resultVC.catalog = resultCatalog
         case ("welcomeSegue" , _):
             break
         case ("menuSegue", let navVC as SideMenuNavigationController):
@@ -33,9 +41,28 @@ extension HomeViewController: SettingsViewControllerDelegate {
     func settingDidPress(setting: Setting, controller: SettingsViewController) {
         switch setting {
         case .catalog:
-            print("Go to catalog")
+            Traveler.fetchCatalog(query: query, delegate: self)
+            performSegue(withIdentifier: "loadingSegue", sender: nil)
         default:
             print("Do nothing")
         }
+    }
+}
+
+extension HomeViewController: CatalogFetchDelegate {
+    func catalogFetchDidSucceedWith(_ result: Catalog) {
+        resultCatalog = result
+        performSegue(withIdentifier: "resultSegue", sender: nil)
+    }
+
+    func catalogFetchDidFailWith(_ error: Error) {
+        performSegue(withIdentifier: "errorSegue", sender: nil)
+    }
+}
+
+extension HomeViewController: RetryViewControllerDelegate {
+    func retryViewControllerDidRetry(_ controller: RetryViewController) {
+        Traveler.fetchCatalog(query: query, delegate: self)
+        performSegue(withIdentifier: "loadingSegue", sender: nil)
     }
 }

@@ -13,6 +13,7 @@
 		65749AC52335763300B4FDCE /* AirlineFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65749AC42335763300B4FDCE /* AirlineFlight.swift */; };
 		65749ACB2335836B00B4FDCE /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65749ACA2335836B00B4FDCE /* RetryViewController.swift */; };
 		65749AD22335920100B4FDCE /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65749AD12335920100B4FDCE /* CatalogViewController.swift */; };
+		65749B31233619BC00B4FDCE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65749B30233619BC00B4FDCE /* ResultViewController.swift */; };
 		65AC8E3D233555F900378A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC8E3C233555F900378A0B /* AppDelegate.swift */; };
 		65AC8E3F233555F900378A0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AC8E3E233555F900378A0B /* HomeViewController.swift */; };
 		65AC8E44233555F900378A0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AC8E42233555F900378A0B /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		65749AC42335763300B4FDCE /* AirlineFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineFlight.swift; sourceTree = "<group>"; };
 		65749ACA2335836B00B4FDCE /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
 		65749AD12335920100B4FDCE /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		65749B30233619BC00B4FDCE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		65AC8E39233555F900378A0B /* AirlineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirlineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AC8E3C233555F900378A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65AC8E3E233555F900378A0B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				65749ACA2335836B00B4FDCE /* RetryViewController.swift */,
 				65749ABC23356ABA00B4FDCE /* FlightsViewController.swift */,
 				65749AD12335920100B4FDCE /* CatalogViewController.swift */,
+				65749B30233619BC00B4FDCE /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				65749ACB2335836B00B4FDCE /* RetryViewController.swift in Sources */,
 				65749ABD23356ABA00B4FDCE /* FlightsViewController.swift in Sources */,
 				65AC8E5F2335622C00378A0B /* SettingsCell.swift in Sources */,
+				65749B31233619BC00B4FDCE /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import TravelerKit
+import TravelerKitUI
+import TravelerStripePaymentProvider
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Traveler SDK
+        Traveler.initialize(apiKey: Environment.travelerKitKey, device: UIDevice.current)
+        TravelerUI.initialize(paymentProvider: StripePaymentProvider(sandBoxModeEnabled: true))
         
         //Theming
         
@@ -27,11 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSAttributedString.Key.foregroundColor : UIColor.white
         ]
         
-        UIButton.appearance().backgroundColor = UIColor(red: 13.0 / 255.0, green: 162.0 / 255.0, blue: 212.0 / 255.0, alpha: 1.0)
-        UIButton.appearance().tintColor = UIColor.white
         UIButton.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).backgroundColor = .none
+        UIButton.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).tintColor = .white
         
         UITabBar.appearance().tintColor = UIColor(red: 13.0 / 255.0, green: 162.0 / 255.0, blue: 212.0 / 255.0, alpha: 1.0)
+
+        UISegmentedControl.appearance().tintColor = UIColor(red: 13.0 / 255.0, green: 162.0 / 255.0, blue: 212.0 / 255.0, alpha: 1.0)
         return true
     }
     

@@ -173,20 +173,31 @@
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="368.97321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="I0C-7Z-nfZ">
             <objects>
-                <viewController id="MF9-RF-L3W" sceneMemberID="viewController">
+                <viewController id="MF9-RF-L3W" customClass="ResultViewController" customModule="AirlineApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2wz-zO-ahC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bjG-JM-Umg"/>
                     </view>
+                    <connections>
+                        <segue destination="XTc-PO-79G" kind="presentation" identifier="itemSegue" id="Uwh-Nr-nSk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFy-1G-XPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4247.826086956522" y="-114.50892857142857"/>
+        </scene>
+        <!--CatalogItem-->
+        <scene sceneID="Xtm-FV-CFT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CatalogItem" bundleIdentifier="com.guestlogix.TravelerKitUI" id="XTc-PO-79G" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1M0-zG-ZzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5096" y="-115"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Bqk-fA-NqF">
