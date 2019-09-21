@@ -10,7 +10,7 @@ import UIKit
 
 class FlightCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
