@@ -21,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Traveler SDK
-        Traveler.initialize(apiKey: Environment.travelerKitKey, device: UIDevice.current)
-        TravelerUI.initialize(paymentProvider: StripePaymentProvider(sandBoxModeEnabled: true))
+        Traveler.initialize(apiKey: Environment.travelerKitKey, device: UIDevice.current, sandboxMode: true)
+        
+        TravelerUI.initialize(paymentHandler: PaymentCollectionViewController.self,
+        paymentAuthenticator: StripePaymentAuthenticator(),
+        paymentManager: StripePaymentProvider.self)
+
         
         //Theming
         
