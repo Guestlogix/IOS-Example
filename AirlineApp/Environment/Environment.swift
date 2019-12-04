@@ -10,5 +10,5 @@ import Foundation
 
 struct Environment {
     
-    static var travelerKitKey: String = "$(TRAVELER_KIT_API_TEST_KEY)"//$(TRAVELER_KIT_API_TEST_KEY)
+    static var travelerKitKey: String = "testtesttesttesttest"//$(TRAVELER_KIT_API_TEST_KEY)
 }
