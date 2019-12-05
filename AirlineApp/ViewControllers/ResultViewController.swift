@@ -11,10 +11,12 @@ import TravelerKitUI
 import TravelerKit
 
 class ResultViewController: CatalogResultViewController {
+    
+    private var catalogItem: CatalogItem?
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch (segue.identifier, segue.destination, sender) {
-        case (_ , let navVC as UINavigationController, let catalogItem as CatalogItem):
+        case (_ , let navVC as UINavigationController, _):
             let vc = navVC.topViewController as? CatalogItemViewController
             vc?.catalogItem = catalogItem
         default:
@@ -23,8 +25,7 @@ class ResultViewController: CatalogResultViewController {
     }
 
     override func catalogView(_ catalogView: CatalogView, didSelectItemAt indexPath: IndexPath) {
-        let catalogItem = catalog!.groups[indexPath.section].items[indexPath.row]
-
-        performSegue(withIdentifier: "itemSegue", sender: catalogItem)
+        catalogItem = catalog!.groups[indexPath.section].items[indexPath.row]
+        performSegue(withIdentifier: "itemSegue", sender: nil)
     }
 }
